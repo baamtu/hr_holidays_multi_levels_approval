@@ -9,7 +9,7 @@
     "category": "Human Resources",
     'website': 'http://www.baamtu.com/',
     'images' : [],
-    'depends' : ['hr', 'hr_holidays'],
+    'depends' : ['base', 'hr', 'hr_holidays'],
     'data': [
         'security/ir.model.access.csv',
         'views/employee.xml',

@@ -1,13 +1,13 @@
 #-*- coding:utf-8 -*-
 
-from odoo import models, fields, api
+from openerp import models, fields, api
 
 class Holidays(models.Model):
     _name = "hr.holidays"
     _inherit = "hr.holidays"
     
     def _default_approver(self):
-        employee = self._default_employee()
+        employee = self.env['hr.employee'].browse(self._employee_get())
         if employee.holidays_approvers:
                 return employee.holidays_approvers[0].approver.id
 

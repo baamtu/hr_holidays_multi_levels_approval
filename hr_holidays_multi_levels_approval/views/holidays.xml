@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<openerp>
 	<data>
 		<record id="view_hr_holidays_form" model="ir.ui.view">
 			<field name="name">hr.holidays.inherited.form</field>
@@ -7,12 +7,12 @@
 			<field name="type">form</field>
 			<field name="inherit_id" ref="hr_holidays.edit_holiday_new" />
 			<field name="arch" type="xml">
-				<button name="action_validate" position="replace">
+				<button name="second_validate" position="replace">
 					<button string="Validate" name="action_validate" states="confirm"
 						type="object" groups="hr_holidays.group_hr_holidays_manager"
 						class="oe_highlight" />
 				</button>
-				<button name="action_approve" position="replace">
+				<button name="validate" position="replace">
 					<field name="current_user_is_approver" invisible="True" />
 					<button string="Approve" name="action_approve" type="object"
 						attrs="{'invisible': ['|', ('current_user_is_approver', '!=', True), ('state', '!=', 'confirm')]}"
@@ -54,7 +54,6 @@
 				</p>
 			</field>
 			<field name="domain">['|', ('pending_approver_user','=', uid), ('pending_transfered_approver_user','=', uid), ('type','=','remove')]</field>
-			<field name="search_view_id" ref="hr_holidays.view_hr_holidays_filter" />
 		</record>
 
 		<menuitem id="hr_holidays.menu_open_department_leave_approve"
@@ -82,4 +81,4 @@
 			sequence="2" />
 		
 	</data>
-</odoo>
+</openerp>
