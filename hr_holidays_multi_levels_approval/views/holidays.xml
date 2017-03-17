@@ -18,9 +18,6 @@
 						attrs="{'invisible': ['|', ('current_user_is_approver', '!=', True), ('state', '!=', 'confirm')]}"
 						class="oe_highlight" />
 				</button>
-				<field name="holiday_status_id" position="replace">
-					<field name="holiday_status_id" context="{'employee_id':employee_id, 'type': type}" />
-				</field>
 				<field name="payslip_status" position="after">
 					<field name="pending_approver" />
 				</field>
