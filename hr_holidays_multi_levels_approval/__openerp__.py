@@ -8,7 +8,7 @@
     "author" : "Baamtu Senegal",
     "category": "Human Resources",
     'website': 'http://www.baamtu.com/',
-    'images' : [],
+    'images': ['static/description/banner.jpg'],
     'depends' : ['base', 'hr', 'hr_holidays'],
     'data': [
         'security/ir.model.access.csv',
