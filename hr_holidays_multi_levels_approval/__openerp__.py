@@ -3,10 +3,10 @@
 # GNU Affero General Public License <http://www.gnu.org/licenses/>
 {
     "name" : "Holidays multi levels approval",
-    "version" : "8.2",
+    "version" : "8.3",
     'license': 'AGPL-3',
     "author" : "Baamtu Senegal",
-    "category": "Human Resources",
+    "category": "Generic Modules/Human Resources",
     'website': 'http://www.baamtu.com/',
     'images': ['static/description/banner.jpg'],
     'depends' : ['base', 'hr', 'hr_holidays'],
