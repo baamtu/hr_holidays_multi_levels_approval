@@ -6,7 +6,7 @@
     "version" : "9.2",
     'license': 'AGPL-3',
     "author" : "Baamtu Senegal",
-    "category": "Human Resources",
+    "category": "Generic Modules/Human Resources",
     'website': 'http://www.baamtu.com/',
     'images': ['static/description/banner.jpg'],
     'depends' : ['base', 'hr', 'hr_holidays'],
