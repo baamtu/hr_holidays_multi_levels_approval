@@ -11,7 +11,7 @@ class Holidays(models.Model):
     _inherit = "hr.holidays"
 
     pending_approver = fields.Many2one('hr.employee', string="Pending Approver", compute='_compute_pending_approver',
-                                       inverse='_inverse_pending_approver', store=True)
+                                       inverse='_inverse_pending_approver', store=True, readonly=True)
     pending_approver_user = fields.Many2one('res.users', string='Pending approver user', related='pending_approver.user_id', related_sudo=True, store=True, readonly=True)
     current_user_is_approver = fields.Boolean(string= 'Current user is approver', compute='_compute_current_user_is_approver')
     approbations = fields.One2many('hr.employee.holidays.approbation', 'holidays', string='Approvals', readonly=True)
